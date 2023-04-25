@@ -18,7 +18,7 @@ const connection = async ()=>{
   
   const load_manual = async ()=>{
     const db = await connection();
-    const jsonString = fs.readFileSync("../../sample_data.json");
+    const jsonString = fs.readFileSync("../sample_data.json");
     const data = JSON.parse(jsonString);
     for(let i=0; i<1000; i++){
         const new_data = new dataModel({
